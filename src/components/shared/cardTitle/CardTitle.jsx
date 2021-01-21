@@ -1,10 +1,13 @@
 import React from 'react';
 
-const CardTitle = ({ title }) => {
+const CardTitle = ({ children, title, onToggle, onHandlerSubmit }) => {
     return (
         <header>
-            <button type="button">Go back</button>
+            <button type="button" onClick={onToggle}>
+                Go back
+            </button>
             <h2>{title}</h2>
+            {children}
             <button type="submit">Ok</button>
         </header>
     );

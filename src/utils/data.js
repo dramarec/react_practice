@@ -11,7 +11,7 @@ const currency = {
 
 const category = {
     title: 'Категория расходов',
-    name: 'outlay',
+    name: 'category',
     options: [
         { value: 'select category', title: 'Выбор категории' },
         { value: 'eat', title: 'Еда' },

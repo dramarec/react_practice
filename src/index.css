@@ -26,6 +26,18 @@ img {
 p {
     margin: 0;
 }
+h2 {
+    margin: 10px;
+}
+button {
+    padding: 5px;
+    width: 100%;
+    cursor: pointer;
+}
+.button-home {
+    display: inline-block;
+    width: 40px;
+}
 
 ul {
     list-style: none;
