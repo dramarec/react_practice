@@ -22,7 +22,7 @@ export default class App extends Component {
         }
     }
 
-    componentDidUpdate(prevProps, prevState) {
+    componentDidUpdate(_, prevState) {
         if (prevState.spenData !== this.state.spenData) {
             localStorage.setItem(
                 'spending',
@@ -66,13 +66,21 @@ export default class App extends Component {
     };
 
     render() {
-        const { incomIsOpen, spendIsOpen, homeIsOpen } = this.state;
+        const {
+            incomIsOpen,
+            spendIsOpen,
+            homeIsOpen,
+            spenData,
+            incomeData,
+        } = this.state;
         return (
             <>
                 {homeIsOpen && (
                     <Home
                         onToggleSpendings={this.toggleSpendings}
                         onToggleIncome={this.toggleIncome}
+                        spending={spenData}
+                        incoming={incomeData}
                     />
                 )}
                 {spendIsOpen && (

@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
+import moment from 'moment';
 
-import Select from '../shared/Select/Select';
-import Input from '../shared/Input/Input';
-import Form from '../shared/Form/Form';
+import Select from '../shared/select/Select';
+import Input from '../shared/input/Input';
+import Form from '../shared/form/Form';
 
 // import { data } from '../../utils/selctOptions';
 import data from '../../utils/data';
-import moment from 'moment';
 import CardTitle from '../shared/cardTitle/CardTitle';
-import Section from '../shared/Section/Section';
+import Section from '../shared/section/Section';
 
 export default class CardIncome extends Component {
     state = {
@@ -16,7 +16,6 @@ export default class CardIncome extends Component {
         date: moment(Date.now()).format('YYYY-MM-DD'),
         time: moment(Date.now()).format('HH:mm'),
         total: '',
-        // category: '',
         income: '',
         currency: '',
         comment: '',
@@ -26,8 +25,8 @@ export default class CardIncome extends Component {
             date: moment(Date.now()).format('YYYY-MM-DD'),
             time: moment(Date.now()).format('HH:mm'),
             total: '',
-            // category: '',
             currency: '',
+            income: '',
         });
     };
 

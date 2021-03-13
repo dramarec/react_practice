@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
+import moment from 'moment';
 
-import Select from '../shared/Select/Select';
-import Input from '../shared/Input/Input';
-import Form from '../shared/Form/Form';
-
+import Select from '../shared/select/Select';
+import Input from '../shared/input/Input';
+import Form from '../shared/form/Form';
 // import { data } from '../../utils/selctOptions';
 import data from '../../utils/data';
-import moment from 'moment';
 import CardTitle from '../shared/cardTitle/CardTitle';
-import Section from '../shared/Section/Section';
+import Section from '../shared/section/Section';
 
 export default class CardSpendings extends Component {
     state = {
@@ -30,7 +29,6 @@ export default class CardSpendings extends Component {
         });
     };
     onHandlerChange = e => {
-        // console.log('e.target', e.target);
         const { name, value } = e.target;
         this.setState({ [name]: value });
     };
@@ -43,7 +41,7 @@ export default class CardSpendings extends Component {
     };
 
     render() {
-        // console.log(this.state);
+        console.log('this.state', this.state);
         return (
             <Section>
                 <Form onSubmit={this.onFormSubmit}>
